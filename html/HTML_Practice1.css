@@ -1,0 +1,37 @@
+*{
+
+	margin: 0;
+	padding: 0;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body{
+	width: 100%;
+}
+
+.cards{
+	display: inline-flex;
+	margin: 50px ;
+
+}
+
+.box{
+	text-align: justify;
+    margin: 0px 40px 0px 40px;
+    border: solid black 2px;
+}
+
+.box img{
+	border: solid grey;
+	margin: 5px 5px 0 5px;
+	width: 215px;
+	height: 315px;
+}
+
+.box p{
+
+	background-color: grey;
+	margin: -5px 5px 5px 5px;
+	padding:5px ;
+	text-align: center;
+}
