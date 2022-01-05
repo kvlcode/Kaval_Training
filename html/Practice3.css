@@ -1,0 +1,12 @@
+/*practice 3*/
+
+.table_main,.table_main * {
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 5px;
+}
+.table_inner {
+    border-collapse:initial;
+    
+}
