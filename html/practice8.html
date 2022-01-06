@@ -1,0 +1,144 @@
+<!-- HTML Practice 8 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Practice8</title>
+	<style type="text/css">
+		.main {
+			padding: 50px 0px 0px 50px;
+			border: solid black 2px;
+		}
+	</style>
+	<script src="practice8.js"></script>
+</head>
+
+<body>
+	<div class="main">
+
+		<form name="registrationForm" onsubmit="checkValidate()">
+			<h4>Personal Information</h4>
+			<table>
+
+				<tr>
+					<td><label>First Name:</label></td>
+					<td><input type="text" name="fname" required></td>
+
+				</tr>
+
+				<tr>
+					<td><label>Last Name:</label></td>
+					<td><input type="text" name="lname"></td>
+
+				</tr>
+
+				<tr>
+					<td><label>Date of Birth:</label></td>
+					<td><input type="date" name="dob" required></td>
+
+				</tr>
+
+				<tr>
+					<td><label>Gender</label></td>
+					<td><select name="gender">
+							<option>Male</option>
+							<option>Female</option>
+						</select></td>
+
+				</tr>
+			</table>
+
+			<h4>Account Information</h4>
+
+			<table>
+
+				<tr>
+					<td><label>Email:</label></td>
+					<td><input type="text" name="email" placeholder="Your email will be your username" required></td>
+
+				</tr>
+
+				<tr>
+					<td><label>Re-type Email:</label></td>
+					<td><input type="text" name="remail"></td>
+				</tr>
+
+				<tr>
+					<td><label>Password:</label></td>
+					<td><input type="Password" name="password" placeholder="Min 8 character, 1 number, case-sensetive"
+							required></td>
+
+				</tr>
+
+				<tr>
+					<td><label>Re-type Password:</label></td>
+					<td><input type="Password" name="rpassword"></td>
+
+				</tr>
+
+				<tr>
+					<td><label>Security Question</label></td>
+					<td><select name="secq">
+							<option>Nick Name</option>
+							<option>Father's Name</option>
+					</td>
+					<td><label>Security Answer</label></td>
+					<td><input type="text" name="secans" placeholder="Not case-sensetive"></td>
+
+				</tr>
+			</table>
+			<h4>Contact Information</h4>
+
+			<table>
+
+				<tr>
+					<td><label>Address:</label></td>
+					<td><input type="text" name="address"></td>
+
+				</tr>
+
+				<tr>
+					<td><label>City</label></td>
+					<td><input type="text" name="city"></td>
+
+				</tr>
+
+
+				<tr>
+					<td><label>State</label></td>
+					<td><select name="state">
+							<option>Gujarat</option>
+							<option>UP</option>
+						</select></td>
+				</tr>
+
+				<tr>
+					<td><label>Zip Code</label></td>
+					<td><input type="number" name="zip"></td>
+					<td><input type="text" name="optional" placeholder="Optional"></td>
+
+				</tr>
+
+
+				<tr>
+					<td><label>Phone</label></td>
+					<td><input type="number" name="phone" required></td>
+
+				</tr>
+
+			</table>
+			<br>
+			<input type="Submit" name="submit">
+
+			<input type="reset" value="Reset" name="reset">
+
+		</form>
+
+	</div>
+
+</body>
+
+</html>
