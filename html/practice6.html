@@ -5,12 +5,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Practice 6</title>
 	<link rel="stylesheet" type="text/css" href="practice6.css">
+
+
+	<script type="text/javascript">
+		
+		function myFun(){
+			alert("Your request has been submitted !");
+		}	
+
+
+	</script>
+
+
 </head>
 <body>
 	<div class="main">
 		<img src="img/contact.jpg">
 
-		<form>
+		<form onsubmit="myFun()">
 			<input type="text" name="name" placeholder="Full name" required><br>
 			<input type="text" name="email" placeholder="Eg. example@emai.com" required><br>
 			<input type="text" name="phone" placeholder="Eg +91 00000 00000" size="10"/ required><br>

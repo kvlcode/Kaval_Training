@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practice 7</title>
+	
+	<link rel="stylesheet" type="text/css" href="practice7.css">
+
+	<script type="text/javascript">
+
+		function myFunction()
+		{
+
+			window.location.href="success.html";
+		}
+	</script>
+</head>
+<body>
+
+<div class="main">
+	
+
+	<form onsubmit="myFunction()">
+		<fieldset>
+			<legend>Your Address</legend>
+		<table class="tbl1">
+			
+				<tr>
+					<td><label>First-name</label></td>
+					<td><input type="text" id="fname" name="firstname">  </td>
+				</tr>
+
+				<tr>
+					<td><label>Last-name</label></td>
+					<td><input type="text" id="lname" name="lastname">  </td>
+				</tr>
+
+				
+
+				<tr>
+					<td><label>Street</label></td>
+					<td><input type="text" id="street" name="street">  </td>
+				</tr>
+
+				<tr>
+					<td><label>City</label></td>
+					<td><input type="text" id="city"  name="city">   </td>
+					
+				</tr>
+		</table>	
+		</fieldset>
+
+		<fieldset>
+			<legend>Aditional details</legend>
+		<table class="tbl2">
+
+			<tr>
+				<td><label>Biography</label></td>
+				<td><textarea rows="2" cols="15"></textarea>     </td>
+				
+			</tr>
+
+			<tr>
+				<td><label>Image</label></td>
+				<td><input type="file" name="file"></td>
+				
+			</tr>
+
+			<tr>
+				<td><label>Age Group</label></td>
+				<td><select name="age">
+					<option>0 to 9 Years</option>
+					<option>10 to 18 Years</option>
+					<option>19 to 25 Years</option>
+				</select>  </td>
+				
+			</tr>
+		</table>	
+		</fieldset>
+
+		<fieldset>
+			<legend>Interests</legend>
+		<table class="tbl3">
+			<tr>
+				<td><label>Hobbies</label></td>
+				<td><select name="age">
+					<option>0 to 9 Years</option>
+					<option>10 to 18 Years</option>
+					<option>19 to 25 Years</option>
+				</select>  </td>
+				
+			</tr>
+
+			<tr>
+				<td><label>Favourite car?</label></td>
+				<td><select name="car">
+					<option>Volvo</option>
+					<option>Alto</option>
+					<option>BMW</option>
+				</select>  </td>
+				
+			</tr>
+
+		</table>
+		</fieldset>		
+
+		<br>
+		<input type="Submit" name="submit">
+
+		<input type="reset" value="Reset" name="reset"> 
+
+	</form>
+
+</div>	
+
+</body>
+</html>
