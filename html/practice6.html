@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,22 +14,21 @@
 		function myFun(){
 			alert("Your request has been submitted !");
 		}	
-
-
 	</script>
-
 
 </head>
 <body>
 	<div class="main">
 		<img src="img/contact.jpg">
 
-		<form onsubmit="myFun()">
+		<form onsubmit="myFun()">   <!-- myFun() is a function that called when form submitted -->
+
 			<input type="text" name="name" placeholder="Full name" required><br>
 			<input type="text" name="email" placeholder="Eg. example@emai.com" required><br>
-			<input type="text" name="phone" placeholder="Eg +91 00000 00000" size="10"/ required><br>
-			<input type="text" col="80" row = "5" name="comment" placeholder="Your Comment" required><br>
-
+			<input type="number" name="phone" placeholder="Eg +91 00000 00000" size="10"/ required><br>
+			<textarea type="text" col="80" row = "5" name="comment" placeholder="Your Comment" required>
+			 </textarea>
+			<br>
 			<input type="submit" name="submit">
 		</form>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Practice 7</title>
+	<title>Practice7</title>
 	
 	<link rel="stylesheet" type="text/css" href="practice7.css">
 
@@ -9,7 +9,9 @@
 
 		function myFunction()
 		{
-
+			// let fname = document.forms["myform"]["fname"].value;
+			// alert(fname);
+			// return true;
 			window.location.href="success.html";
 		}
 	</script>
@@ -18,11 +20,10 @@
 
 <div class="main">
 	
-
-	<form onsubmit="myFunction()">
+	<form name="myform" onsubmit="return myFunction()">
 		<fieldset>
 			<legend>Your Address</legend>
-		<table class="tbl1">
+		<table>
 			
 				<tr>
 					<td><label>First-name</label></td>
@@ -51,7 +52,7 @@
 
 		<fieldset>
 			<legend>Aditional details</legend>
-		<table class="tbl2">
+		<table>
 
 			<tr>
 				<td><label>Biography</label></td>
@@ -79,14 +80,14 @@
 
 		<fieldset>
 			<legend>Interests</legend>
-		<table class="tbl3">
+		<table>
 			<tr>
 				<td><label>Hobbies</label></td>
 				<td><select name="age">
 					<option>0 to 9 Years</option>
 					<option>10 to 18 Years</option>
 					<option>19 to 25 Years</option>
-				</select>  </td>
+				</select> </td>
 				
 			</tr>
 
@@ -96,7 +97,7 @@
 					<option>Volvo</option>
 					<option>Alto</option>
 					<option>BMW</option>
-				</select>  </td>
+				</select></td>
 				
 			</tr>
 
@@ -111,6 +112,5 @@
 	</form>
 
 </div>	
-
 </body>
 </html>
