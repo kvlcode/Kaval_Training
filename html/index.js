@@ -1,5 +1,5 @@
-// 6-1-2021
-// Register, login, Contact Form task
+// 6-1-2022
+// Register, login, Contact Form 
 
 function loginValidation() {
     var email = document.forms['loginForm']['email'];
