@@ -1,0 +1,53 @@
+#Day 6
+10-01-2022
+
+1.Linked List: A linked list is a linear data structure.
+              - LinkedList is not stored in a contiguous memory location.
+Types : - Singly
+        - Doubly
+        - Circular
+
+-In singly linked list is in node have data and address of next node.Last node have address value is NULL.
+-In Doubly linked list each node have data and address of previous and next node.
+-Circular linked list is singly linked list in which last element contains address od first node.
+
+-> Advantages: dynamic data structure
+               No memory wastage
+               Easy implementation
+
+-> Disadv.: Memory Usage
+            Traversal
+
+
+
+2.Recursion: It is a technique in which function calls it self.
+
+ -> Recursion is made for solving problems that can be broken down into smaller, 
+    repetitive problems. 
+
+Adv.: Reduce length of code.
+     Reduce unnecessary calling of function.
+
+DisAdv.: Slower than non-recursive function
+         Require more Memory
+
+
+3.Time Complexity: Time taken by code to execute.
+
+Depends on some factors like system, code etc.
+
+-> Frequency count: How many time statement executed.
+
+*Big O notation:
+We can express algorithmic complexity using the big-O notation.
+For a problem of size N:
+
+-constant-time: O(1)
+-linear-time : O(n)
+-quadratic-time : O(N^2)
+
+
+
+
+
+

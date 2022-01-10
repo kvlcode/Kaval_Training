@@ -26,14 +26,15 @@ function checkValidate(){
 		}
 		
 		if(email.value != remail.value ){
-			alert("Please make sure your email match")
+			alert("Please make sure your email match");
 
 		}
 
 		if(password.value != rpassword.value ){
-			alert("Please make sure your passwords match")
+			alert("Please make sure your passwords match");
 
 		}
+		return true;
 
 	
 }	

@@ -1,0 +1,84 @@
+#Day 5
+07-01-2022
+
+1.Data Structures & Algorithm:
+
+* Data Structure: Diffrent way to store data in system
+*if you have some data then you can present/store in diffrent way
+    Ex: We have data in table format then we can convert 
+        it in array, stack or hash table format.
+
+    
+* Which data structure is used is depend on perticular situation.
+  And different datastructure have it's own Advantages and Disadv.
+    Ex: Aarray & Linked List
+     - It is easy to find data at perticular index in array compare to LL.
+     - Adding more place in array is not possible, In LL it's possible
+         
+
+
+* Algorithm: Operations on diffrent data Structures
+              + sets of instructions for executing them 
+
+* For same problem you have different algorith 
+  Efficiency of algorith is depending on it's time and space complexity             
+    
+*Algorithm is depending on which data Structure you are using
+    Ex: If you write an algorithm for stack data structure then 
+        the same algorithm for other datastructure like hash table 
+        can be completely different. 
+
+
+2. Arrays and Memory:
+Arrays:
+    * Can store data only same data-type.
+    * Can store fixed size of data, can't add extra places to store data.
+      Overcome with dynamic Memory allocation.
+      insertion and deletionn is costly
+    * If you define any Array, U can't change 
+      the size of array in further process.  int arr[3] = {2,3,4};
+
+
+Memory: 
+        To store data there are two mechanism
+        1.Memory(RAM) : Not Permenant  
+        2.Storage(Hard disk) : Permenant
+
+        When we start any App. that load on memory.
+        When we save any ongoing txt file wil store in storage.
+
+
+        Why not using only ROM? 
+        It is very slow compare to RAM.
+        Ex: Consider Desk as a RAM and Bag as a Storage
+
+        
+        Computer is not directly store data in memory, 
+        it coverts it in 0 & 1 format.
+        Compuer achieve this using index.
+
+        Memory is long tap of bytes.
+        a byte = a small unit of data = 8bits.
+        1 byte = 8 bits.
+        Integer occupies 32 bits So,
+        To store integer we need 4 bytes.
+        
+
+3.Introduction to Classes and Objects:
+
+        We can access property and method of class using Object.
+        Object is like variable that contains attributes and functions.
+
+        Class is blueprint of Objects. class does not refer to any one Object
+        It refers to category.
+
+        Ex: Car is a Class
+            Objects: Honda, BMW, Audi 
+            attributes : color, model, 
+
+    Constructor is special method that is used to initalize Object.
+    Constructor is called when Object of class is created.
+    it can be used to set initial values for object attributes.
+
+
+
