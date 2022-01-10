@@ -19,10 +19,10 @@ class factorial {
         int n, a = 1;
         System.out.print("Enter n:\t");
 
-        n = sc.nextInt();               // To find n! take input n
-        
-        a = fact(n);                    // Call function to find factorial
-        
+        n = sc.nextInt(); // To find n! take input n
+
+        a = fact(n); // Call function to find factorial
+
         System.out.println(n + "! is " + a);
 
     }

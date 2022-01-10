@@ -9,14 +9,16 @@ class object2{
 
         audi.show(); // method called
         bmw.show(); // method called
-
+        
+        // Create Person Object
         Person p1 = new Person("Salman", "aggressive", false); // Person 1
         Person p2 = new Person("Stan", "talkative", true); // Person 2
 
-        p1.carOwned = audi;
+        // Connection between Classes
+        p1.carOwned = audi; 
         p2.carOwned = bmw;
 
-        p1.carOwned.show();
+        p1.carOwned.show(); //Access method of one class using second class 
         p2.carOwned.show();
 
     }
