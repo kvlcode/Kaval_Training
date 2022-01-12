@@ -1,0 +1,23 @@
+//12-01-2022 Hash tables and Dictionaries Notes
+
+
+#Hash tables : It is a data structure  that stores information
+             that info. is key and value pairs.
+            -> It uses hash function that maps value with key.
+            -> Arrangement of data is depens on hash function.
+            -> It makes faster to access data.    
+
+            -> It is possible there are same key, that is called collision.
+            -> Collision occurance is depends on hash function.
+            -> Hashing is one of the searching techniques that uses a constant time.
+
+ * Hash function can calculated by different methods:
+            :- Foldind
+            :- Division
+            :- Mid square
+
+======================================================
+
+#Dictionary : It is data structure that stores data in key value format.
+            :-We can also called Dictionary ds as a associative array.    
+Operations : Saerch , insert, delete.
