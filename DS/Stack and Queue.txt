@@ -1,0 +1,53 @@
+//12-01-2022 : Stack and Queue Notes.
+
+# Stack: Stack is a linear data structure in which insertion and deletion allowed
+         only at one end, that called "TOP" of the stack.
+        -> It uses one pointer which points the top of the stack.
+        -> Works on LIFO : Last In First Out
+        -> We can perform two operations on stack.
+            1. PUSH (): To add element in stack.
+            2. POP (): To delete element from stack.   
+
+            :- In PUSH operation it checks if the stack full or not.
+            :- In POP operation it checks is the stack empty or not.
+
+    Ex: Undo & Redo process in Word& Excel file.
+
+
+#Queue: It is a linear data structure in which insertion perform at end of the stack and
+        deletion perform from front of the stack.
+        -> Queue works on FIFO : First In First Out.
+        -> It uses two pointers one points 1st element of queue and other points empty space 
+            after last element.
+
+        -> If queue out of bound we can use circular queue.
+        -> insertion in queue is known as "queue" & deletion from queue is known as "dequeue".
+        * Operations: Enqueue()
+                      Dequeue()
+                      Queue overflow()
+                      Queue underflow()
+                      Peek() :This is the third operation that returns the element, 
+                              which is pointed by the front pointer in the queue but does not delete it
+
+        * Double ended queue : We can add and remove elements from both side.
+        Ex: Line of people to buy ticket at cinema hall. 
+
+        * Insetion :
+                    if rear = max-1
+                        print "overflow";
+
+                    if  front = -1 && rear =-1
+                        set front =0, rear =0;
+                    ele
+                        set last =last + 1;
+
+                    set Q[last] = value;
+
+        * Deletion :
+                    if front =-1 || front > last
+                            print underflow;
+
+                    else 
+                             t = Q[front];
+                             front = front + 1;
+                                                           
