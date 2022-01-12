@@ -8,8 +8,8 @@
             1. PUSH (): To add element in stack.
             2. POP (): To delete element from stack.   
 
-            :- In PUSH operation it checks if the stack full or not.
-            :- In POP operation it checks is the stack empty or not.
+            :- Before PUSH operation it checks if the stack full or not.
+            :- Before POP operation it checks is the stack empty or not.
 
     Ex: Undo & Redo process in Word& Excel file.
 
