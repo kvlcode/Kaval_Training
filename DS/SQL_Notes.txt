@@ -1,0 +1,31 @@
+//Introduction to SQL and MySQL
+//13-01-2022
+#SQL: Structured Query Language.
+
+-> A programming Language specifically designed for working
+with databases.
+-> It allows to create, manipulate, share data from 
+   Relational databases management Systems.
+-> It is done by writing queries.
+-> Query is piece of code we gives to computer, and computer
+    gives desired output.This process is called quering the database.
+
+->It is easy to learn and powerful. 
+
+
+# MySQL : It is an open-source relational database management system.
+          -> open-source, reliable, mature.  
+          -> Used by many big companies: FB,YT.  
+
+
+# Databases :       
+
+            * Record = Row
+            * field = column 
+                    a column in a table containing specifically
+                    information about every record in table.
+
+            * Entity: The samllest unit that can contain a
+                      meaningful set of data. 
+                      -> Rows:Horizontal Entity = Entity instance.
+                      -> Columns: Vertical Entity 
