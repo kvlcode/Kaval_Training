@@ -1,5 +1,4 @@
 /*DAY-11 INSERT, UPDATE, DELETE*/
-
 USE database1;
 
 CREATE TABLE employees (
@@ -62,7 +61,24 @@ VALUES
         'Marlie',
         'M',
         '2001-05-04'
-); 
+),
+(
+	4,
+    '1989-03-29',
+    'Krsna',
+    'Kaul',
+    'M',
+    '2016-09-25'
+),
+(
+	5,
+    '1995-05-02',
+    'Rahul',
+    'Prajapati',
+    'M',
+    '2021-09-25'
+);
+
 SELECT * FROM employees;
 
 
@@ -118,6 +134,7 @@ WHERE
 	emp_no = 1;
    
 /*Check updated value*/ 
+
 SELECT 
     *
 FROM						
@@ -127,5 +144,19 @@ WHERE
     
 /*rollback will have an effect on the last execution you have performed*/
     
+/*Delete Statement*/
+
+DELETE FROM employees 
+WHERE
+    emp_no = 3;
+
+DELETE FROM employees;   /*This will delete  all rows */
 
 
+/*ON DELETE CASCADE : if a specific value from parent table's primary key has been deleted,
+all recordd from the child table referring to this value will be removed as well*/  
+
+/*DROP vs TRUNCATE vs DELETE*/
+/*DROP : DELETE whole structure*/
+/*TRUNCATE: delete all record, not a Structure. Gives output much quicker than delete*/
+/*DELETE : removes records row by row*/
