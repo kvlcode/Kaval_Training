@@ -106,3 +106,26 @@ SELECT * FROM departments;
 SELECT*FROM departments_dup;
 
 
+/*Update Statement*/
+
+/*Update values in employees table*/
+UPDATE employees
+SET 
+	birth_date = '1990-12-03',
+    first_name = 'Russ', 
+    last_name = 'Parkinson'
+WHERE 
+	emp_no = 1;
+   
+/*Check updated value*/ 
+SELECT 
+    *
+FROM						
+    employees
+WHERE
+	emp_no = 1;   
+    
+/*rollback will have an effect on the last execution you have performed*/
+    
+
+
