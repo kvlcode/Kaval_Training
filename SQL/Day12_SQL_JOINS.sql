@@ -3,7 +3,7 @@
 USE database1;
 
 CREATE TABLE department_1 (
-    dept_no     CHAR(4),
+    dept_no    CHAR(4),
     emp_no 		INT,
     from_date 	DATE,
     to_date 	DATE
@@ -36,8 +36,9 @@ VALUES ('d002', 'ME'),
  
  /*a for department_1, b for department_2*/
  
+ /*JOIN = INNER JOIN*/
  
- SELECT a.dept_no, a.emp_no, b.dept_name
+ SELECT a.dept_no, a.emp_no, a.from_date, a.to_date, b.dept_name
  FROM department_1 a
  INNER JOIN
  department_2 b on a.dept_no = b.dept_no
