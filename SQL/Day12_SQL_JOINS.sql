@@ -44,6 +44,49 @@ VALUES ('d002', 'ME'),
  department_2 b on a.dept_no = b.dept_no
  ORDER BY b.dept_no;
         
+ /*Duplicate Values*/
+ INSERT INTO department_1
+ VALUES('d002', '203', '1988-02-06', '2020-01-05');
+ 
+ INSERT INTO department_2
+ VALUES('d007', 'EC');
+ 
+ SELECT a.dept_no, a.emp_no, a.from_date, a.to_date, b.dept_name
+ FROM department_1 a
+ INNER JOIN
+ department_2 b on a.dept_no = b.dept_no
+ ORDER BY a.dept_no;
+ 
+ /*LEFT JOIN = LEFT OUTER JOIN*/
+SELECT a.dept_no, a.emp_no, a.from_date, a.to_date, b.dept_name
+FROM department_1 a
+LEFT JOIN
+department_2 b on a.dept_no = b.dept_no
+group by a.emp_no
+ORDER BY a.dept_no;
+
+/*Make department_2 left*/
+SELECT b.dept_no, a.emp_no, a.from_date, a.to_date, b.dept_name
+FROM department_2 b 
+LEFT JOIN
+department_1 a on a.dept_no = b.dept_no
+ORDER BY a.dept_no;
+
+
+/*RIGHT JOIN*/
+
+SELECT a.dept_no, a.emp_no, b.dept_name
+FROM department_1 a
+RIGHT JOIN
+department_2 b on a.dept_no = b.dept_no
+ORDER BY a.dept_no; 
+
+
+
+
+
+
+        
         
         
         
