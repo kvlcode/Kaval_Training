@@ -233,44 +233,7 @@ ADD foreign key(parent_id) references category(category_id);
 ALTER TABLE product_review
 add foreign key(parent_id) references product_review(product_review_id);
 
-/*Queries*/
 
-
-SELECT*FROM category WHERE category_id in (SELECT parent_id FROM category);
-
-/*Get all the products which are having
- price between 50 to 100*/
-SELECT*FROM product WHERE price BETWEEN 50 and 100;
-
-/*Get all the products sorted based on created date
-Get total sub total of all the orders*/
-SELECT*FROM product ORDER BY  created_at;
-
-/*Get total sub total of all the orders*/
-SELECT SUM(sub_total) FROM user_order;
-
-/*Get total discount applied in all the orders*/
-SELECT SUM(discount) FROM user_order;
-
-/*Get data of particular user that how many orders they are having*/
-SELECT COUNT(*) FROM user_order WHERE user_id =2;
-
-/*select  user_id,COUNT(id)
-from order_details 
-group by usr_id;*/
-
-/*Get orders list which is having promo applied in that order
-select id from order*/
-SELECT * FROM user_order WHERE promo IS NOT NULL;
-
-/*Get current active carts details*/
-SELECT*FROM cart WHERE cart_status =active;
-
-
-/*get the list of product ids which are having multiple categories*/
-Select productId from product_category
-group by productId
-having count(categoryId)>1;
 
 
 
