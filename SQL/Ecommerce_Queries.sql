@@ -98,11 +98,16 @@ FROM product p
 
 
 /* 6.List out product names and product ids which have at least one order available.*/
-SELECT p.product_id, p.title
-FROM product p
-	INNER JOIN
-    order_item o ON p.product_id = t.product_id
- WHERE  COUNT(p.product_id)>=1;
+SELECT 
+    p.title AS product_name,
+    p.product_id,
+    oi.order_id,
+    COUNT(*) AS order_count
+FROM
+    product p
+        JOIN
+    order_item oi ON p.product_id = oi.product_id
+GROUP BY p.product_id having count(oi.order_id) >= 1;
 
 
 /*7.Show the product names, ids and total qty purchased so far for each product.*/
@@ -119,19 +124,16 @@ GROUP BY p.product_id;
 
 
 /* 8.Show User ID and Order ID associated with that User.*/
-SELECT u.user_id, o.order_id
-FROM useer u
+SELECT u.user_id, u.first_name,o.order_id
+FROM user_details u
 	INNER JOIN
-    user_order o ON u.user_id = o.order_id
- WHERE  COUNT(p.product_id)>1;
+    order_details o ON u.id = o.id;
 
 
 /* 9.Show total subtotal of all the orders for user id 1*/
-SELECT SUM(o.subtotal)
-FROM user_order o
-	INNER JOIN
-	user_detail u ON u.user_id = o.user_id
-WHERE o.user_id =1;	
+SELECT  SUM(subTotal) AS total_subtotal
+FROM user_order
+where  user_id = 1;
 
 /*10.Show all the orders which are created on 19th Jan.*/
 SELECT 
