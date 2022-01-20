@@ -39,9 +39,16 @@ group by productId
 having count(categoryId)>1;
 
 /* 10.Get all the product ids which is having more than 2 reviews */
-	
+	SELECT p.product_id
+    FROM product p
+		 INNER JOIN
+         product_review pr ON p.product_id = pr.product_id
+         WHERE (SELECT COUNT(*) FROM product_review WHERE p.product_id = pr.product_id) > 2;
+
 
 /*11.Get all the products which are updated in last 2 hours*/
+
+SELECT * FROM product WHERE updated_at >= NOW() - INTERVAL 2 HOUR;
 
 
 /*12.Get products which is having qty between 20 to 30*/
@@ -64,7 +71,7 @@ SELECT COUNT(p.product_id)
 FROM product p
 	INNER JOIN
     product_category c ON p.product_id = c.product_id
- WHERE  c.category_id =2;
+ WHERE p.product_type =1 AND c.category_id =2;
  
  
  /* 3.Show all category names which are assigned to Product ID 1.*/
@@ -75,7 +82,6 @@ FROM category c
  WHERE  p.product_id =1;
  
  
- 
  /* 4.List out all the tag names which are assigned to Product ID 1.*/
 SELECT t.title
 FROM product_tag pt
@@ -84,10 +90,11 @@ FROM product_tag pt
  WHERE  pt.product_id =1;
 
 /* 5.Show product reviews with product name if product is active*/
-SELECT r.title
+SELECT r.title, p.title
 FROM product p
 	INNER JOIN
-    product_review r ON p.product_id = r.product_id ;
+    product_review r ON p.product_id = r.product_id
+    WHERE p.product_type =1;
 
 
 /* 6.List out product names and product ids which have at least one order available.*/
@@ -95,10 +102,20 @@ SELECT p.product_id, p.title
 FROM product p
 	INNER JOIN
     order_item o ON p.product_id = t.product_id
- WHERE  COUNT(p.product_id)>1;
+ WHERE  COUNT(p.product_id)>=1;
 
 
 /*7.Show the product names, ids and total qty purchased so far for each product.*/
+
+SELECT 
+    p.title AS product_name,
+    p.product_id,
+    SUM(oi.quantity) AS total_qty_purchased
+FROM
+    product p
+        JOIN
+    order_item oi ON p.product_id = oi.product_id
+GROUP BY p.product_id;
 
 
 /* 8.Show User ID and Order ID associated with that User.*/
@@ -130,7 +147,6 @@ FROM product p
 	JOIN
     order_item o ON p.product_id = o.order_id
     WHERE o.order_id =1;
-
 
 /*12.List out the order of user ID 1 which has a discount greater than 100.*/
 SELECT*FROM user_order WHERE user_id =1 AND discount>100;
