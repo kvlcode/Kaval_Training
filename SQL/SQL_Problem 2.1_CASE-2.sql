@@ -38,5 +38,9 @@ FROM employee e1
 							AND 
 						e1.department_id = e2.department_id) < 3;              
     
-    
+    SELECT COUNT(DISTINCT salary)
+				FROM employee e2
+				WHERE e2.salary > e1.salary
+							AND 
+						e1.department_id = e2.department_id;
     

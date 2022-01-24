@@ -100,4 +100,4 @@ select u.email
 from user u
 	 inner join 
      employee e on u.id = e. user_id
-     where  YEAR(current_date()) - YEAR(e.ends_at) = 1;
+     where  YEAR(current_date()) - YEAR(e.start_at) = 1;
