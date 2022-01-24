@@ -86,7 +86,6 @@ from user u
 			 role_permission rp on r.id = rp.role_id
          where e.created_at >= now() - interval 2 day  AND  rp.permission_id=1;   
 
-
 /*4.Get the active count of employees working in organization id 1.*/
 	select count(e.id) as  Employee_count
     from employee e
@@ -100,4 +99,4 @@ select u.email
 from user u
 	 inner join 
      employee e on u.id = e. user_id
-     where YEAR(e.starts_at) = YEAR(CURRENT_DATE()) - 1;
+     where  YEAR(current_date()) - YEAR(e.ends_at) = 1;
