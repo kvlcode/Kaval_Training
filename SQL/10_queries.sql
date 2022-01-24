@@ -39,14 +39,15 @@ from subscriber s
      where m.active =1;
 
 /*5.Get all the users email and newsletter title for which newsletter triggered today.*/
-select u.email, n.title
-from user u
-	 inner join 
-     news_letter n on u.id = n.user_id
-     inner join
-     news_letter_trigger t on n.id = t.news_letter_id
-     where t.sent_at = now();
-
+          
+SELECT 
+    u.email, n.title
+FROM
+    user u
+        JOIN
+    news_letter n ON u.id = n.user_id
+WHERE
+    n.published_at > CURRENT_DATE();
 
 
 /*Employee Database*/
@@ -98,4 +99,4 @@ select u.email
 from user u
 	 inner join 
      employee e on u.id = e. user_id
-     where  DATEDIFF(now(), ends_at) = 1;
+     where  YEAR(current_date()) - YEAR(e.ends_at) = 1;

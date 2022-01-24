@@ -162,7 +162,7 @@ select*from edition;
 select*from subscriber;
 select*from address;
 select*from mailinglist;
-
+select*from news_letter_trigger;
 select*from news_letter_meta;
 
 
