@@ -159,6 +159,12 @@ add foreign key(news_letter_id) references news_letter(id);
 select*from user;
 select*from news_letter;
 select*from edition;
+select*from subscriber;
+select*from address;
+select*from mailinglist;
+
+select*from news_letter_meta;
+
 
 INSERT INTO `news`.`edition` (`id`, `news_letter_id`, `title`, `description`, `status`, `created_at`, `updated_at`, `published_at`, `content`) VALUES ('1', '1', 'edition1', 'edesc1', '1', '2005-09-11 09:07:58', '2005-09-19 09:07:58', '2006-09-11 09:07:58', 'content1');
 INSERT INTO `news`.`edition` (`id`, `news_letter_id`, `title`, `description`, `status`, `created_at`, `updated_at`, `published_at`, `content`) VALUES ('2', '2', 'edition2', 'edesc2', '0', '2005-08-11 09:07:58', '2006-09-11 09:07:58', '2007-09-11 09:07:58', 'content2');
