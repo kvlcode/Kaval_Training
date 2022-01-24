@@ -47,7 +47,7 @@ FROM
         JOIN
     news_letter n ON u.id = n.user_id
 WHERE
-    n.published_at > CURRENT_DATE();
+    n.published_at > now();
 
 
 /*Employee Database*/
@@ -84,7 +84,8 @@ from user u
              role r on r.id = e.role_id
 				join
 			 role_permission rp on r.id = rp.role_id
-         where e.created_at >= now() - interval 2 day  AND  rp.permission_id=1;   
+         where e.created_at >= now() - interval 2 day AND rp.permission_id=1;
+   
 
 /*4.Get the active count of employees working in organization id 1.*/
 	select count(e.id) as  Employee_count
