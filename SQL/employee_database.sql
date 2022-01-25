@@ -130,7 +130,7 @@ alter table organization_meta
 add foreign key(organization_id) references organization(id);
 
 
-
+select * from employee;
 select * from permission;
 select * from role;
 select * from role_permission;
