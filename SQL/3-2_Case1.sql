@@ -17,7 +17,7 @@ select
 		player_id, 
         event_date as first_login 
         from activity  
-			group by player_id order by event_date ASC;
+			group by player_id;
 
 
 /*Question 2: Write an SQL query to report the device that is first logged in for each player.
@@ -27,11 +27,9 @@ select
 		player_id, 
         device_id
         from activity  
-			group by player_id order by event_date ASC;
+			group by player_id;
         
-        
-            
-            
+	
  /*Question 3: Write an SQL query to report for each player and date, 
  how many games played so far by the player. 
  That is, the total number of games played by the player until that date. 
@@ -44,7 +42,7 @@ select a1.player_id,
        from activity a1
 			inner join 
 			activity a2 on 
-            where 
+            where ;
 
 
 
