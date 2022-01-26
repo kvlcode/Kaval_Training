@@ -8,6 +8,6 @@ select 	m.*,
 		mi.*
 		from  menu m
 				join
-			   menu_items mi on m.id = mi.menu_id
+			   menu_item mi on m.id = mi.menu_id
 				 join 
 			    item i on mi.item_id = i.id;

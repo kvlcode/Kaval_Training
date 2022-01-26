@@ -7,4 +7,4 @@
 	select i.*
 		  from item i
 		  join order_item oi on i.id=oi.order_id
-		  where time(created_at) between '19:00:00' AND '22:00:00';
+		  where time(oi.created_at) between '19:00:00' AND '22:00:00';

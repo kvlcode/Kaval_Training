@@ -7,7 +7,7 @@
 		   max(oi.price) as highest_priced_item
 			from user u
 				 join 
-                 item i on u.id = i.userid
+                 item i on u.id = i.user_id
 				 join 
                  order_item oi on i.user_id = oi.item_id
 				 group by u.id;
